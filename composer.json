@@ -1,0 +1,22 @@
+{
+    "name": "heqiauto/json-log",
+    "description": "JSON file log for Yii2",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "panlatent",
+            "email": "panlatent@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5",
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "heqiauto\\jsonlog\\": "src/"
+        }
+    }
+}

@@ -30,7 +30,18 @@ To install the plugin, follow these instructions.
 3. Config your application components:
 
 ```php
-
+[
+    'components' => [
+        'log' => [
+            'targets' => [
+                [
+                    'class' => \heqiauto\jsonlog\FileTarget::class,
+                    'levels' => ['error', 'warning', 'info'], // Without TRACE and PROFILE on production environment
+                ],
+            ],
+        ],
+    ],
+]
 ```
 
 License

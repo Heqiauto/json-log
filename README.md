@@ -1,7 +1,5 @@
 JSON Log
 ========
-[![Build Status](https://travis-ci.org/heqiauto/json-log.svg)](https://travis-ci.org/heqiauto/json-log)
-[![Coverage Status](https://coveralls.io/repos/github/heqiauto/json-log/badge.svg?branch=master)](https://coveralls.io/github/heqiauto/json-log?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/heqiauto/json-log/v/stable.svg)](https://packagist.org/packages/heqiauto/json-log)
 [![Total Downloads](https://poser.pugx.org/heqiauto/json-log/downloads.svg)](https://packagist.org/packages/heqiauto/json-log) 
 [![Latest Unstable Version](https://poser.pugx.org/heqiauto/json-log/v/unstable.svg)](https://packagist.org/packages/heqiauto/json-log)

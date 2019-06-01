@@ -6,7 +6,6 @@ JSON Log
 [![Total Downloads](https://poser.pugx.org/heqiauto/json-log/downloads.svg)](https://packagist.org/packages/heqiauto/json-log) 
 [![Latest Unstable Version](https://poser.pugx.org/heqiauto/json-log/v/unstable.svg)](https://packagist.org/packages/heqiauto/json-log)
 [![License](https://poser.pugx.org/heqiauto/json-log/license.svg)](https://packagist.org/packages/heqiauto/json-log)
-[![Craft CMS](https://img.shields.io/badge/Powered_by-Craft_CMS-orange.svg?style=flat)](https://craftcms.com/)
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
 
 JSON file log for Yii2.

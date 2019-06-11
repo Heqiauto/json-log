@@ -151,7 +151,9 @@ class FileTarget extends \yii\log\FileTarget
      */
     protected function getRequest()
     {
-        if ($this->request->getHeaders()->has($this->requestIdHeader)) {
+        $isWebRequest = $this->request instanceof Response;
+
+        if ($isWebRequest && $this->request->getHeaders()->has($this->requestIdHeader)) {
             $requestId = $this->request->getHeaders()->get($this->requestIdHeader);
         } elseif ($this->requestId !== null) {
             $requestId = $this->requestId;
@@ -159,17 +161,25 @@ class FileTarget extends \yii\log\FileTarget
             $requestId = $this->requestId = uniqid();
         }
 
+        if (!$isWebRequest) {
+            return [
+                'id' => $requestId,
+            ];
+        }
+
         /* @var $user \yii\web\User */
         $user = $this->app->has('user', true) ? $this->app->get('user') : null;
-        $userID = $user && ($identity = $user->getIdentity(false)) ?  $identity->getId() : null;
+        $userID = $user && ($identity = $user->getIdentity(false)) ? $identity->getId() : null;
 
         /* @var $session \yii\web\Session */
         $session = $this->app->has('session', true) ? $this->app->get('session') : null;
         $sessionID = $session && $session->getIsActive() ? $session->getId() : null;
 
+        $ip =  $this->request->getUserIP();
+
         return [
             'id' => $requestId,
-            'ip' => $this->request->getUserIP(),
+            'ip' => $ip,
             'userID' => $userID,
             'sessionID' => $sessionID,
         ];
